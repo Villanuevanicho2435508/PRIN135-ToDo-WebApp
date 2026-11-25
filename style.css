@@ -1,0 +1,240 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f6f7;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    border: 2px solid #a3a8ad;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 820px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.action {
+    display: flex;
+    gap: 0.5rem;
+    margin-block: 1rem;
+}
+
+.action input {
+    height: 3rem;
+    border-radius: 8px;
+    border: 2px solid #a3a8ad;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+#todo-name {
+    flex: 1;
+    min-width: 0;
+}
+
+#todo-hours {
+    width: 6rem;
+}
+
+.action button {
+    width: 5rem;
+    background-color: #3d4144;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1.5rem 0.5rem;
+}
+
+.filters input[type="radio"] {
+    display: none;
+}
+
+.filters label {
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    color: #62676d;
+}
+
+.filters input[type="radio"]:checked + label {
+    border: 2px solid #41464a;
+    border-radius: 1rem;
+    color: #242629;
+}
+
+.filters button,
+.item-count button {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: #62676d;
+}
+
+.tasks {
+    margin-top: 0.5rem;
+}
+
+.task {
+    padding: 1.2rem 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.task span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.task input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #62676d;
+}
+
+.task label {
+    cursor: pointer;
+}
+
+.task-name {
+    font-size: 1rem;
+}
+
+.task input[type="checkbox"]:checked + .task-name {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.badge,
+.badge-medium,
+.badge-hard {
+    cursor: pointer;
+    width: fit-content;
+    border: 2px solid gray;
+    border-radius: 1rem;
+    padding: 0.3rem 0.7rem;
+    white-space: nowrap;
+}
+
+.badge {
+    color: #62676d;
+    background-color: white;
+}
+
+.badge-medium {
+    background-color: #e9ebed;
+}
+
+.badge-hard {
+    background-color: #41464a;
+    color: white;
+    border-color: #41464a;
+}
+
+.remove-task {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #62676d;
+    margin-left: 0.5rem;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #d4d8dc;
+}
+
+.item-count {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: #62676d;
+    font-size: 0.95rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #62676d;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .action {
+        flex-wrap: wrap;
+    }
+
+    #todo-name {
+        flex-basis: 100%;
+    }
+
+    #todo-hours {
+        flex: 1;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .task {
+        padding: 1rem 0;
+    }
+
+    .task-name {
+        font-size: 0.9rem;
+    }
+
+    .badge,
+    .badge-medium,
+    .badge-hard {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .item-count {
+        font-size: 0.8rem;
+    }
+}
